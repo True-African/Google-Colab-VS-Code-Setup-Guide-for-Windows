@@ -49,12 +49,12 @@ Run Google Colab notebooks directly inside VS Code on Windows with free GPU/TPU 
 
 ## What's Included
 
-- 📚 Complete installation guide with screenshots
-- 🔧 VS Code settings configuration
-- 🚀 GPU/TPU connection instructions
-- 📓 Ready-to-use notebook templates
-- 🧹 Cleanup and resource management
-- ❌ Common issues and solutions
+- Complete installation guide with screenshots
+- VS Code settings configuration
+- GPU/TPU connection instructions
+- Ready-to-use notebook templates
+- Cleanup and resource management
+- Common issues and solutions
 
 ## Repository Topics
 

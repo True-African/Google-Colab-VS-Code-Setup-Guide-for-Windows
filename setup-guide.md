@@ -16,9 +16,21 @@ This guide walks you through connecting VS Code to Google Colab's cloud runtimes
 
 ## Step 1: Install the Jupyter Extension
 
-1. Press `Ctrl+Shift+X` to open the Extensions panel — click the grid icon in the left sidebar
+1. Press `Ctrl+Shift+X` to open the Extensions panel — click the **grid icon** in the left sidebar
+
+   ![VS Code activity bar with the Extensions grid icon circled](<Last 12 images/image-1776284728850.png>)
+
 2. Search for **"Jupyter"**
-3. Install the official **Jupyter** extension by Microsoft (98M+ downloads)
+
+   ![Extensions Marketplace searching for "jupyter"](<Last 12 images/image-1776284794242.png>)
+
+3. Click the **Jupyter** extension by Microsoft (98M+ downloads)
+
+   ![Jupyter extension in search results showing 98M downloads and Install button](<Last 12 images/image-1776284892969.png>)
+
+4. Click **Install** on the extension detail page
+
+   ![Jupyter extension detail page with Install button highlighted](<Last 12 images/image-1776284926916.png>)
 
 > The Jupyter extension is a required prerequisite for the Colab extension to work.
 
@@ -27,9 +39,16 @@ This guide walks you through connecting VS Code to Google Colab's cloud runtimes
 ## Step 2: Install the Google Colab Extension
 
 1. In the Extensions panel, search for **"Colab"**
-2. **Important:** Ensure the publisher is **Google** (verified blue checkmark)
-3. Click **Install**
-4. When prompted, click **"Trust Publisher & Install"**
+
+   ![Extensions Marketplace searching for "colab" showing Colab by Google](<Last 12 images/image-1776284955806.png>)
+
+2. Click the **Colab** extension — **Important:** confirm the publisher is **Google** (verified blue checkmark)
+
+   ![Colab extension detail page showing Google as verified publisher with Install button](<Last 12 images/image-1776284990928.png>)
+
+3. Click **Install**, then click **"Trust Publisher & Install"** when prompted
+
+   !["Do you trust the publisher Google?" dialog with Trust Publisher & Install button circled](<Last 12 images/image-1776285047290.png>)
 
 > Always verify the publisher is Google before installing to avoid unofficial clones.
 
@@ -37,11 +56,17 @@ This guide walks you through connecting VS Code to Google Colab's cloud runtimes
 
 ## Step 3: Create a Jupyter Notebook
 
-1. In the Explorer panel, create a new file: `test.ipynb`
-2. VS Code will automatically recognize it as a Jupyter notebook
-3. You should see the **Colab** button appear in the notebook toolbar
+1. In the Explorer panel (`Ctrl+Shift+E`), right-click and create a new file named `test.ipynb`
 
-![Notebook opened in VS Code showing the Colab button in the toolbar](<Last 12 images/image-1776285730630.png>)
+   ![VS Code Explorer panel with test.ipynb highlighted and arrows pointing to it](<Last 12 images/image-1776285131260.png>)
+
+2. VS Code recognizes it as a Jupyter notebook — you'll see the **Colab** button appear in the toolbar
+
+   ![test.ipynb open in VS Code showing the Colab button in the notebook toolbar](<Last 12 images/image-1776285323178.png>)
+
+3. Add a code cell (click **+ Code**) and type something — the notebook is ready to connect
+
+   ![test.ipynb with a code cell showing import pandas as pd](<Last 12 images/image-1776284568422.png>)
 
 ---
 
@@ -51,32 +76,53 @@ This guide walks you through connecting VS Code to Google Colab's cloud runtimes
 
 1. Click the **"Python 3 (ipykernel)"** kernel selector in the top-right of the notebook
 
-   ![Python 3 kernel picker — click to change runtime](<Last 12 images/image-1776285675134.png>)
+   ![Close-up of the Python 3 (ipykernel) kernel selector button](<Last 12 images/image-1776285351122.png>)
 
-2. The kernel change panel opens — select **"Select Another Kernel..."**
+2. A dropdown appears — select **"Select Another Kernel..."**
 
-   ![Change kernel dialog showing Colab currently selected with Select Another Kernel option](<Last 12 images/image-1776285881237.png>)
+   ![Change kernel dropdown: Python 3 Currently Selected and Select Another Kernel option](<Last 12 images/image-1776285381380.png>)
 
 3. Choose **"Colab"** from the kernel source list
 
-   ![Kernel source picker with Python Environments, Jupyter Kernel, Existing Jupyter Server, and Colab options](<Last 12 images/image-1776285940519.png>)
+   ![Kernel source picker: Python Environments, Jupyter Kernel, Existing Jupyter Server, and Colab](<Last 12 images/image-1776285399597.png>)
 
 4. Click **"Auto Connect"** to connect instantly to a CPU runtime
 
-   ![Auto Connect, New Colab Server, Open Colab Web, and Upgrade to Pro options](<Last 12 images/image-1776286001542.png>)
+   ![Select a remote server: Auto Connect, New Colab Server, Open Colab Web](<Last 12 images/image-1776285457923.png>)
 
-5. Sign in with your Google account when prompted:
-   - Click **Allow** when Colab asks to sign in via Google
-   - Click **Open** when VS Code asks to open the external website
-   - On the Google authorization page, click the **copy icon** to copy the authorization code
-   - Paste the code into the VS Code input box and press **Enter**
+5. **Sign in with your Google account** — follow these steps exactly:
+
+   a. VS Code asks: *"The extension 'Colab' wants to sign in using Google"* — click **Allow**
+
+   !["The extension Colab wants to sign in using Google" dialog with Allow button](<Last 12 images/image-1776285475959.png>)
+
+   b. VS Code asks to open an external website — click **Open**
+
+   !["Do you want Code to open the external website?" dialog showing accounts.google.com URL with Open button](<Last 12 images/image-1776285516936.png>)
+
+   c. The Google authorization page opens in your browser — click the **copy icon** to copy the code
+
+   ![Google Colab authorization page with "Copy the code" section and copy icon circled](<Last 12 images/image-1776285570683.png>)
+
+   d. Back in VS Code, an input box appears — paste the code and press **Enter**
+
+   ![VS Code authorization code input box: "Enter your authorization code (Press Enter to confirm)"](<Last 12 images/image-1776285627537.png>)
+
+   ![VS Code authorization code input with the code pasted (shown as dots)](<Last 12 images/image-1776285653230.png>)
+
+   e. The kernel picker reappears — select **Python 3 (ipykernel)**
+
+   ![Kernel picker showing Python 3 (ipykernel) Recommended, Julia, R](<Last 12 images/image-1776285675134.png>)
 
 ---
 
 ### Option B: GPU/TPU Connection ⭐ (Recommended for ML)
 
-1. Follow steps 1–3 from Option A above to reach the Colab kernel source picker
-2. Select **"New Colab Server"** (see the options in the image above)
+1. Follow steps 1–4 from Option A above to reach the remote server picker
+2. Select **"New Colab Server"** instead of Auto Connect
+
+   ![Select a remote server options including New Colab Server with description "CPU, GPU or TPU"](<Last 12 images/image-1776286001542.png>)
+
 3. Choose your runtime type — select **GPU** for machine learning workloads
 
    ![Runtime selection showing CPU, GPU (cursor on GPU), and TPU options](<Last 12 images/image-1776286029004.png>)
@@ -95,9 +141,17 @@ This guide walks you through connecting VS Code to Google Colab's cloud runtimes
 
 ## Step 5: Verify Your Connection
 
-Once connected, the top-right corner of the notebook shows `Python 3 (ipykernel) /usr/bin/python3 (Colab)`:
+Once connected, the kernel selector in the top-right changes to show `Python 3 (ipykernel) /usr/bin/python3 (Colab)`:
 
 ![Notebook top-right showing the Colab runtime kernel name](<Last 12 images/image-1776285847029.png>)
+
+You can also confirm by clicking the kernel — it shows **Colab** as the currently selected source:
+
+![Change kernel dialog showing "Python 3 /usr/bin/python3 (Colab) — Currently Selected"](<Last 12 images/image-1776285881237.png>)
+
+The notebook toolbar also displays the **Colab** button, confirming the active connection:
+
+![Notebook toolbar with Colab button visible and the + Code button highlighted](<Last 12 images/image-1776285730630.png>)
 
 ### Test with a code cell
 
@@ -126,6 +180,8 @@ A successful execution shows a green tick and runtime in seconds:
 
   ![!nvidia-smi output showing Tesla T4 GPU, CUDA 13.0, 15360MiB memory](<Last 12 images/image-1776286166302.png>)
 
+  ![!nvidia-smi cell output with GPU utilization and process table](<Last 12 images/image-1776284603912.png>)
+
 ---
 
 ## Step 6: Switch Between Runtimes
@@ -134,8 +190,12 @@ To switch from CPU to GPU (or vice versa):
 
 1. Click the kernel name in the top-right of the notebook
 2. Select **"Select Another Kernel..."**
-3. Choose **"Colab"** → **"New Colab Server"** → pick the new runtime type
-4. Sign in again if required
+3. Choose **"Colab"** from the kernel source list
+
+   ![Kernel source picker with Colab highlighted/circled](<Last 12 images/image-1776285940519.png>)
+
+4. Choose **"New Colab Server"** → pick the new runtime type
+5. Sign in again if required
 
 ---
 
