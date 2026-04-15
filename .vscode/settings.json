@@ -1,0 +1,7 @@
+{
+    "jupyter.alwaysTrustNotebooks": true,
+    "jupyter.interactiveWindow.cellMarker": "%%",
+    "colab.server.autoStart": false,
+    "colab.defaultRuntime": "GPU",
+    "colab.runtimeType": "T4_GPU"
+}
